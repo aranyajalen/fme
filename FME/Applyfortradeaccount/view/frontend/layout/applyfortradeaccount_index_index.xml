@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+        <head>
+                <title>Apply for trade account</title>
+        </head>
+        <body>
+            <referenceContainer name="content">
+                <referenceBlock name="breadcrumbs">
+                    <action method="addCrumb">
+                        <argument name="crumbName" xsi:type="string">return</argument>
+                        <argument name="crumbInfo" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Return</item>
+                            <item name="label" xsi:type="string" translate="true">Return</item>
+                            <item name="link" xsi:type="string">{{baseUrl}}</item>
+                        </argument>
+                    </action> 
+                </referenceBlock>
+                <block template="FME_Applyfortradeaccount::postform.phtml" class="FME\Applyfortradeaccount\Block\Postform" name="fme_applyfortradeaccount_postform">
+                    <container name="form.additional.info" label="Form Additional Info"/>
+                </block>
+            </referenceContainer>
+        </body>    
+</page>
